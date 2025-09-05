@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>영화와 비평</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <script type="module" src="./js/javascript.js" defer></script>
+  </head>
+  <body>
+    <div class="top_btn_box">
+      <button class="buy_btn">예매하기</button>
+      <div class="top_btn">
+        <i class="fa-solid fa-arrow-up"></i>
+      </div>
+    </div>
+    <div class="header_outer">
+      <header class="header">
+        <div class="header_top">
+          <h1 class="pc_logo">
+            <a href="../index.html">
+              <img
+                src="./images/header/header_logo 1.svg"
+                alt="영화의전당 로고"
+            /></a>
+          </h1>
+          <h1 class="mobile_logo">
+            <a href="../index.html">
+              <img
+                src="./images/header/header_logo mobile.svg"
+                alt="영화의전당 로고"
+            /></a>
+          </h1>
+          <div class="mobile_top_up">
+            <div class="search_box mobile_search">
+              <input type="text" class="search" placeholder="최신영화" />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="mobile_gnb_btn">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+          </div>
+          <div class="gnb_top">
+            <ul>
+              <li><a href="#!">로그인</a></li>
+              <li><a href="#!">회원가입</a></li>
+              <li><a href="#!">마이페이지</a></li>
+              <li><a href="#!">고객센터</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="header_down_outer">
+      <div class="header_down">
+        <nav class="gnb">
+          <ul>
+            <li><a href="#!">영화</a></li>
+            <li><a href="#!">공연/전시/프로그램</a></li>
+            <li><a href="#!">예매</a></li>
+            <li><a href="#!">예술관</a></li>
+            <li><a href="#!">아카데미</a></li>
+          </ul>
+        </nav>
+        <div class="search_box">
+          <input type="text" class="search" placeholder="최신영화" /><i
+            class="fa-solid fa-magnifying-glass"
+          ></i>
+        </div>
+        <div class="pc_sub_menu_box">
+          <ul class="pc_sub_menu01 pc_sub_menu">
+            <li><a href="#!">상영시간표</a></li>
+            <li><a href="#!">현재상영작</a></li>
+            <li><a href="#!">상영예정작</a></li>
+            <li><a href="./sub_page/index.html">영화와비평</a></li>
+            <li><a href="#!">관람후기</a></li>
+          </ul>
+          <ul class="pc_sub_menu02 pc_sub_menu">
+            <li><a href="#!">공연/전시 프로그램 안내</a></li>
+            <li><a href="#!">공연일정</a></li>
+            <li><a href="#!">전시일정</a></li>
+            <li><a href="#!">프로그램일정</a></li>
+          </ul>
+          <ul class="pc_sub_menu03 pc_sub_menu">
+            <li><a href="#!">예매하기</a></li>
+            <li><a href="#!">예매안내</a></li>
+          </ul>
+          <ul class="pc_sub_menu04 pc_sub_menu">
+            <li><a href="#!">영화도서관 소개</a></li>
+            <li><a href="#!">이용 안내</a></li>
+            <li><a href="#!">자료 검색</a></li>
+            <li><a href="#!">대여/대관 안내</a></li>
+            <li><a href="#!">대여/대관 신청</a></li>
+            <li><a href="#!">시설 안내</a></li>
+          </ul>
+          <ul class="pc_sub_menu05 pc_sub_menu">
+            <li><a href="#!">아카데미 안내</a></li>
+            <li><a href="#!">아카데미 신청</a></li>
+            <li><a href="#!">영화 아카데미</a></li>
+            <li><a href="#!">예술 아카데미</a></li>
+            <li><a href="#!">어린이 청소년 아카데미</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="mobile_gnb_top">
+      <!--모바일 서브 메뉴-->
+      <div class="mobile_login_btn">
+        <p class="mobile_login">로그인</p>
+        <i class="fa-solid fa-circle-chevron-right"></i>
+      </div>
+      <nav class="mobile_gnb">
+        <h3>메뉴</h3>
+        <ul class="main_gnb">
+          <li>영화</li>
+          <li>공연/전시/프로그램</li>
+          <li>예매</li>
+          <li>예술관</li>
+          <li>아카데미</li>
+        </ul>
+        <div class="mobile_event_box">
+          <p class="mobile_event_text">event</p>
+          <div class="mobile_event_img">
+            <img src="./images/header/mobile_gnb_event.png" alt="이벤트 배너" />
+          </div>
+        </div>
+        <div class="mobile_sns_link">
+          <ul>
+            <li class="mobile_facebook">
+              <a href="#!"
+                ><img src="./images/header/facebook.png" alt="페이스북링크"
+              /></a>
+            </li>
+            <li class="mobile_facebook">
+              <a href="#!"
+                ><img src="./images/header/twitter.png" alt="트위터링크"
+              /></a>
+            </li>
+            <li class="mobile_facebook">
+              <a href="#!"
+                ><img src="./images/header/instagram.png" alt="인스타링크"
+              /></a>
+            </li>
+            <li class="mobile_facebook">
+              <a href="#!"
+                ><img src="./images/header/youtube.png" alt="유튜브링크"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="mobile_sub_menu_wrapper">
+        <ul class="mobile_sub_gnb">
+          <li><a href="#!">상영시간표</a></li>
+          <li><a href="#!">현재상영작</a></li>
+          <li><a href="#!">상영예정작</a></li>
+          <li><a href="./sub_page/index.html">영화와비평</a></li>
+          <li><a href="#!">관람후기</a></li>
+        </ul>
+        <ul class="mobile_sub_gnb">
+          <li><a href="#!">공연/전시 프로그램 안내</a></li>
+          <li><a href="#!">공연 일정</a></li>
+          <li><a href="#!">전시 일정</a></li>
+          <li><a href="#!">프로그램 일정</a></li>
+        </ul>
+        <ul class="mobile_sub_gnb">
+          <li><a href="#!">예매하기</a></li>
+          <li><a href="#!">예매 안내</a></li>
+        </ul>
+        <ul class="mobile_sub_gnb">
+          <li><a href="#!">영화도서관 소개</a></li>
+          <li><a href="#!">이용 안내</a></li>
+          <li><a href="#!">자료 검색</a></li>
+          <li><a href="#!">대여/대관 안내</a></li>
+          <li><a href="#!">대여/대관 신청</a></li>
+          <li><a href="#!">시설안내</a></li>
+        </ul>
+        <ul class="mobile_sub_gnb">
+          <li><a href="#!">아카데미 안내</a></li>
+          <li><a href="#!">아카데미 신청</a></li>
+          <li><a href="#!">영화 아카데미</a></li>
+          <li><a href="#!">예술 아카데미</a></li>
+          <li><a href="#!">어린이 청소년 아카데미</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--모바일 서브 메뉴-->
+    <main class="main">
+      <div class="side_bar">
+        <div class="side_bar_gnb">
+          <h3>영화</h3>
+          <ul>
+            <li><a href="#!">상영시간표</a></li>
+            <li><a href="#!">현재상영작</a></li>
+            <li><a href="#!">상영예정작</a></li>
+            <li><a href="#!">영화와비평</a></li>
+          </ul>
+        </div>
+      </div>
+      <section class="movies_criticeism">
+        <div class="critic_grid">
+          <div class="current_location">
+            <i class="fa-solid fa-house"></i>
+            <span>></span>
+            <p>영화</p>
+            <span>></span>
+            <p>영화와비평</p>
+          </div>
+          <h2 class="main_title">영화와 비평</h2>
+          <p class="main_text">
+            영화에 대한 전문적 식견과 통찰력, 다양한 관점이 돋보이는
+            '영화평론가'의 차별화된 평론을 만나는 공간입니다.감독과 영화에 대한
+            전문적인 지식을 바탕으로 한 논리적인 평론글로 여러분을 새로운 영화
+            세상으로 안내합니다.
+          </p>
+          <div class="pc_critics">
+            <div class="critics">
+              <div class="critics_img critics01">
+                <img src="./images/criticism/criticism_01.jpg" alt="" />
+                <div class="critics_introduction introduction01">
+                  <p class="association">한국영화평론가협회<br />영화평론가</p>
+                  <p class="critic_name">홍수정</p>
+                </div>
+              </div>
+              <div class="critics_img critics02">
+                <img src="./images/criticism/criticism_02.jpg" alt="" />
+                <div class="critics_introduction introduction02">
+                  <p class="association">한국영화평론가협회<br />영화평론가</p>
+                  <p class="critic_name">백호수</p>
+                </div>
+              </div>
+              <div class="critics_img critics03">
+                <img src="./images/criticism/criticism_03.jpg" alt="" />
+                <div class="critics_introduction introduction03">
+                  <p class="association">한국영화평론가협회<br />영화평론가</p>
+                  <p class="critic_name">김수한</p>
+                </div>
+              </div>
+              <div class="critics_img critics04">
+                <img src="./images/criticism/criticism_04.jpg" alt="" />
+                <div class="critics_introduction introduction04">
+                  <p class="association">한국영화평론가협회<br />영화평론가</p>
+                  <p class="critic_name">박정남</p>
+                </div>
+              </div>
+            </div>
+            <div class="critics_full_introduction">
+              <p class="full_name"></p>
+              <p class="full_text"></p>
+            </div>
+            <div class="criticism_list">
+              <div class="criticism criticism01">
+                <div class="criticism_img">
+                  <img
+                    src="./images/review/우리가 빛이라 상상하는 모든 것.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="criticism_title">
+                  피프레시 5월 월요시네마 <우리가 빛이라 상상하는 모든 것>에
+                  관하여
+                </p>
+                <p class="criticism_name">한국영화평론가협회 홍수정 평론가</p>
+              </div>
+              <div class="criticism criticism01">
+                <div class="criticism_img">
+                  <img
+                    src="./images/review/우리가 빛이라 상상하는 모든 것.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="criticism_title">
+                  피프레시 5월 월요시네마 <우리가 빛이라 상상하는 모든 것>에
+                  관하여
+                </p>
+                <p class="criticism_name">한국영화평론가협회 홍수정 평론가</p>
+              </div>
+              <div class="criticism criticism01">
+                <div class="criticism_img">
+                  <img
+                    src="./images/review/우리가 빛이라 상상하는 모든 것.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="criticism_title">
+                  피프레시 5월 월요시네마 <우리가 빛이라 상상하는 모든 것>에
+                  관하여
+                </p>
+                <p class="criticism_name">한국영화평론가협회 홍수정 평론가</p>
+              </div>
+              <div class="criticism criticism01">
+                <div class="criticism_img">
+                  <img
+                    src="./images/review/우리가 빛이라 상상하는 모든 것.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="criticism_title">
+                  피프레시 5월 월요시네dsad마 <우리가 빛이라 상상하는 모든 것>에
+                  관하여
+                </p>
+                <p class="criticism_name">한국영화평론가협회 홍수정 평론가</p>
+              </div>
+            </div>
+          </div>
+          <div class="mobile_critics">
+            <div class="critics">
+              <div class="critics01 critic">
+                <div class="critics_img">
+                  <img src="./images/criticism/criticism_mobile01.jpg" alt="" />
+                  <div class="introduction">
+                    <p class="full_name">한국영화평론가협회 홍수정 평론가</p>
+                    <p class="full_text">
+                      동국대학교에서 극작과 영화이론을 전공. 前 대구대, 경
+                      남대에서 콘텐츠 시나리오 창작 강의. 속초국제장애인 영화제
+                      프로그래머,「현대미술을 가지고 노는 그림책」 시리즈 출판.
+                      르몽드, 텐아시아 등에 영화평론과 리뷰를 기고. 現. 작가
+                      에이전시 밀어 운영. 순천 KBS 라디오 시네마 톡톡 출연.
+                      CGV극장과 함께 개봉하는 독립/ 예술영화의 GV를 기획 진행
+                      하고 있다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="critics01 critic">
+                <div class="critics_img">
+                  <img src="./images/criticism/criticism_mobile02.jpg" alt="" />
+                  <div class="introduction">
+                    <p class="full_name">한국영화평론가협회 백호수 평론가</p>
+                    <p class="full_text">
+                      계명대에서 이성복 교수를 사사하고 연세대 국문과에서 석,
+                      박사 학위를 받았다. 2012년 도미 후 에모리대를 거쳐 대만
+                      국립정치대, 싱가포르 난양공대에서 교수로 지내다 2019년
+                      귀국 후 세종사이버대 한국어학과에 재직 중이다. 동아일보
+                      신춘문예 영화평론으로 등단했으며, 제10회
+                      서울국제사랑영화제에서 기독교 영화 비평 대상을 수상했다.
+                      만화평론상, 서울국제프라이드영화제 등의 심사위원,
+                      한국영화평론가협회 집행부를 역임했으며, 한국언어문화,
+                      인문치료 등의 연구에 집중하고 있다. 공저로 『영화와
+                      가족』(2022), 『영화와 권력』(2023), 『영화와 육체』(2024
+                      예정) 등이 있고, 현재 《경기일보》, 《르몽드
+                      디플로마티크》에 글을 싣고 있다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="critics01 critic">
+                <div class="critics_img">
+                  <img src="./images/criticism/criticism_mobile03.jpg" alt="" />
+                  <div class="mobile_introduction">
+                    <p class="full_name">한국영화평론가협회 김수한 평론가</p>
+                    <p class="full_text">
+                      부산대학교 예술문화영상학과에서 박사과정을 수료하고,
+                      동시대 영화에서 허구의 미학적 함의를 주제로 박사 논문을
+                      준비 중이다. 2024년 영화의전당 영화평론대상을 수상했으며,
+                      현재 영화비평과 연구를 병행하고 있다. 영화가 직조하는
+                      서사의 결을 따라, 스크린을 넘어 확장되는 감각과 사유의
+                      지평을 탐색하는 데 집중하고자 한다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="critics01 critic">
+                <div class="critics_img">
+                  <img src="./images/criticism/criticism_mobile04.jpg" alt="" />
+                  <div class="introduction">
+                    <p class="full_name">한국영화평론가협회 김수한 평론가</p>
+                    <p class="full_text">
+                      서울대학교 학부에서 미학과 철학을 수학 중이다. 2022년
+                      대학문학상, 2023년 영화의전당 영화평론대상을 수상해
+                      평론가로 활동하게 되었다. 예술을 통한 공적 연대의 가능성에
+                      대한 관심사를 바탕으로 예술의 윤리적, 사회적 역량에
+                      주목하는 평론을 하고자 한다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mobile_criticism_list">
+              <div class="criticism criticism01">
+                <div class="criticism_img">
+                  <img
+                    src="./images/review/우리가 빛이라 상상하는 모든 것.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="criticism_title">
+                  피프레시 5월 월요시네마 <우리가 빛이라 상상하는 모든 것>에
+                  관하여
+                </p>
+                <p class="criticism_name">한국영화평론가협회 홍수정 평론가</p>
+              </div>
+              <div class="criticism criticism01">
+                <div class="criticism_img">
+                  <img
+                    src="./images/review/우리가 빛이라 상상하는 모든 것.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="criticism_title">
+                  피프레시 5월 월요시네마 <우리가 빛이라 상상하는 모든 것>에
+                  관하여
+                </p>
+                <p class="criticism_name">한국영화평론가협회 홍수정 평론가</p>
+              </div>
+              <div class="criticism criticism01">
+                <div class="criticism_img">
+                  <img
+                    src="./images/review/우리가 빛이라 상상하는 모든 것.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="criticism_title">
+                  피프레시 5월 월요시네마 <우리가 빛이라 상상하는 모든 것>에
+                  관하여
+                </p>
+                <p class="criticism_name">한국영화평론가협회 홍수정 평론가</p>
+              </div>
+              <div class="criticism criticism01">
+                <div class="criticism_img">
+                  <img
+                    src="./images/review/우리가 빛이라 상상하는 모든 것.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="criticism_title">
+                  피프레시 5월 월요시네마 <우리가 빛이라 상상하는 모든 것>에
+                  관하여
+                </p>
+                <p class="criticism_name">한국영화평론가협회 홍수정 평론가</p>
+              </div>
+              <div class="criticism criticism01">
+                <div class="criticism_img">
+                  <img
+                    src="./images/review/우리가 빛이라 상상하는 모든 것.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="criticism_title">
+                  피프레시 5월 월요시네마 <우리가 빛이라 상상하는 모든 것>에
+                  관하여
+                </p>
+                <p class="criticism_name">한국영화평론가협회 홍수정 평론가</p>
+              </div>
+              <div class="criticism criticism01">
+                <div class="criticism_img">
+                  <img
+                    src="./images/review/우리가 빛이라 상상하는 모든 것.jpg"
+                    alt=""
+                  />
+                </div>
+                <p class="criticism_title">
+                  피프레시 5월 월요시네마 <우리가 빛이라 상상하는 모든 것>에
+                  관하여
+                </p>
+                <p class="criticism_name">한국영화평론가협회 홍수정 평론가</p>
+              </div>
+            </div>
+          </div>
+          <button class="criticism_list_btn">평론 더 보기</button>
+        </div>
+        <div class="humanity_flex">
+          <section class="humanity">
+            <h2 class="section_title">
+              영화의 전당에서 소개하는 영화와 인문학
+            </h2>
+            <div class="humanity_list_box">
+              <div class="humanity_list humanity_list01">
+                <div class="humanity_list_img">
+                  <img src="./images/humanity/humanity2.jpg" alt="" />
+                </div>
+                <div class="humanity_text_box">
+                  <p class="humanity_title"><보이 인 더 풀>, 풀 밖에 소녀</p>
+                  <p class="humanity_text">
+                    분야에 따라 차이가 있기는 하지만, 특히 예•체능 계통은 취미와
+                    직업 사이에서 선택에 따른 인생의 희비가 엇갈릴 가능성이
+                    크다. 예를 들어 영화를 좋아하는 것과 영화를 잘 찍는 것은
+                    완전히 다른 문제일 수 있는데, 착각하는 경우가 빈번하다.
+                    그래서 “내가 왜 취미로 즐기던 걸 업으로 선택했을까”라며
+                    한탄하는 이들을 주변에서 종종 보게 된다. 좋아하는 데
+                    재능까지 있다면 금상첨화겠지만, 그렇지 않은 사례가 예상보다
+                    더 많은 것 같다.
+                  </p>
+                  <p class="humanity_day">2025-06-19</p>
+                </div>
+              </div>
+
+              <div class="humanity_list humanity_list02">
+                <div class="humanity_list_img">
+                  <img src="./images/humanity/humanity3.jpg" alt="" />
+                </div>
+                <div class="humanity_text_box">
+                  <p class="humanity_title">
+                    여기서 시작했고, 여기서 끝내야 할 - <케이 넘버>의 방황
+                  </p>
+                  <p class="humanity_text">
+                    해외로 입양되었던 미오카는 2008년부터 지속적으로 한국을
+                    찾는다. 방문의 목적은 예상할 수 있듯 한국에 있을 가족을 찾기
+                    위해서이다. 1974년 길에서 발견된 미오카는 ‘김미옥’이라는
+                    이름의 ‘기아(棄兒)아동’으로 ‘기록’되었고, 보호소와 보육원,
+                    위탁가정을 거쳐 미국으로 보내졌다. 미국은 6살의 어린
+                    이방인을 환영하지 않았고 미옥이라는 이름에 A를 붙여
+                    ‘미오카’라는, 미국에 익숙한 이름으로 바꾸었을 때에야 약간의
+                    숨을 틔워주었다.
+                  </p>
+                  <p class="humanity_day">2025-06-19</p>
+                </div>
+              </div>
+              <div class="humanity_list humanity_list03">
+                <div class="humanity_list_img">
+                  <img src="./images/humanity/humanity5.jpg" alt="" />
+                </div>
+                <div class="humanity_text_box">
+                  <p class="humanity_title">
+                    왜곡된 존재 증명의 섬뜩한 결과 - 영화 <침범>이 날 세워 그린
+                    순간들
+                  </p>
+                  <p class="humanity_text">
+                    ‘왜?’라는 질문이 어떠한 힘도 발휘하지 못할 때가 있다. 아무리
+                    오래, 어떤 수를 써서 생각을 해도 도무지 이해할 수 없는 일
+                    앞에선 오랜 경험도, 이성도, 판단도 무가치하다. 게다가 어떻게
+                    해도 이 상황에서 벗어날 방법이 보이지 않는다면 절망이 앞서는
+                    것을 막을 방법도 없다. 영화 <침범>의 영은(곽선영)에게 닥친
+                    현실이 그렇다. 의심의 여지 없이 사랑스러워야만 할 딸
+                    소현(기소유)은 피곤함을 넘어 공포스러운 존재가 된 지 오래다.
+                  </p>
+                  <p class="humanity_day">2025-06-19</p>
+                </div>
+              </div>
+              <div class="humanity_list humanity_list04">
+                <div class="humanity_list_img">
+                  <img src="./images/humanity/humanity4.jpg" alt="" />
+                </div>
+                <div class="humanity_text_box">
+                  <p class="humanity_title">
+                    희미함을 끈질기게 붙드는 이들에게 찬사를 - <여성국극
+                    끊어질듯 이어지고 사라질듯 영원하다>
+                  </p>
+                  <p class="humanity_text">
+                    ‘그냥 좋다’는 것만큼 무서운 것은 없다. ‘그냥’ 좋은 것은
+                    어떠한 이유도 필요치 않기에 싫어할 가능성조차 생각할 수 없는
+                    탓이다. 누가 무어라 하든, 어떤 상황을 겪든, 그냥 좋은 것
+                    앞에선 모든 것이 수용되고 모든 것이 허락된다. 내가 좋아하는
+                    그것에 가까이 닿을 수만 있다면 다른 것은 크게 중요치 않다.
+                    ‘그냥’의 힘은 그렇게 누군가의 동력이 되고 종종 어떤 것에는
+                    희망이 된다.
+                  </p>
+                  <p class="humanity_day">2025-06-19</p>
+                </div>
+              </div>
+              <div class="humanity_list humanity_list05">
+                <div class="humanity_list_img">
+                  <img src="./images/humanity/humanity1.jpg" alt="" />
+                </div>
+                <div class="humanity_text_box">
+                  <p class="humanity_title">
+                    <컴플리트 언노운>, 살아있는 전설의 시작
+                  </p>
+                  <p class="humanity_text">
+                    1941년에 태어난 밥 딜런은 83세의 나이에도 여전히 현역으로
+                    활동 중이다. 2023년에는 40번째 스튜디오 앨범 『그림자
+                    왕국』을 발표했으며, 공식 홈페이지에는 올해 9월까지 라이브
+                    공연 투어 일정이 빽빽하게 올라와 있다. 대중 음악가로서
+                    노벨문학상을 수상한 밥 딜런은 ‘살아있는 전설’이라는 명성에
+                    걸맞게 그를 다룬 영화가 지금까지 4편에 이른다.
+                  </p>
+                  <p class="humanity_day">2025-06-19</p>
+                </div>
+              </div>
+              <button class="humanity_btn mobile_btn_Style01">
+                인문학 더 보기
+              </button>
+            </div>
+          </section>
+          <section class="citizen_critic">
+            <h2 class="citizen_critic_title section_title">시민평론단</h2>
+            <div class="citizen_critic_list_box">
+              <div class="citizen_critic_list">
+                <div class="citizen_critic_img">
+                  <img src="./images/비평/시민평론단김제동.jpeg" alt="" />
+                  <p class="citizen_critic_name">
+                    시민평론가<span>'김제동'님</span>
+                  </p>
+                  <div class="citizen_critic_bg"></div>
+                </div>
+
+                <p class="citizen_critic_text">
+                  완벽하지 않아서 더 완벽한 우리의 나날들
+                </p>
+              </div>
+              <div class="citizen_critic_list">
+                <div class="citizen_critic_img">
+                  <img src="./images/비평/시민평론단오승하.jpg" alt="" />
+                  <p class="citizen_critic_name">
+                    시민평론가<span>'오승하'님</span>
+                  </p>
+                  <div class="citizen_critic_bg"></div>
+                </div>
+
+                <p class="citizen_critic_text">
+                  내 인생의 영화 ~영화 구룡성채 : 무법지대를 보고
+                </p>
+              </div>
+              <div class="citizen_critic_list">
+                <div class="citizen_critic_img">
+                  <img src="./images/비평/시민평론단정명선.jpg" alt="" />
+                  <p class="citizen_critic_name">
+                    시민평론가<span>'정명선'님</span>
+                  </p>
+                  <div class="citizen_critic_bg"></div>
+                </div>
+
+                <p class="citizen_critic_text">
+                  막걸리를 아침햇살로 번역하는 당돌한 어린이들!
+                </p>
+              </div>
+            </div>
+            <button class="citizen_critic_btn mobile_btn_Style01">
+              시민평론 더 보기
+            </button>
+          </section>
+        </div>
+      </section>
+    </main>
+    <div class="sns_list">
+      <div class="facebook sns">
+        <img src="./images/footer/icon/icon_facebook.png" alt="" />
+      </div>
+      <div class="instagram sns">
+        <img src="./images/footer/icon/icon_instagram.png" alt="" />
+      </div>
+      <div class="tiwtter sns">
+        <img src="./images/footer/icon/icon_twitter.png" alt="" />
+      </div>
+      <div class="youtube sns">
+        <img src="./images/footer/icon/icon_youtube.png" alt="" />
+      </div>
+    </div>
+    <div class="footer_bg">
+      <footer class="footer">
+        <div class="mobile_sns_list">
+          <div class="facebook sns">
+            <img src="./images/footer/icon/icon_facebook.png" alt="" />
+          </div>
+          <div class="instagram sns">
+            <img src="./images/footer/icon/icon_instagram.png" alt="" />
+          </div>
+          <div class="tiwtter sns">
+            <img src="./images/footer/icon/icon_twitter.png" alt="" />
+          </div>
+          <div class="youtube sns">
+            <img src="./images/footer/icon/icon_youtube.png" alt="" />
+          </div>
+        </div>
+
+        <div class="wing_banner_list">
+          <div class="wing_banner wing_banner01">
+            <picture>
+              <source
+                srcset="./images/wig_banner/banner.jpg"
+                media="(max-width: 600px)"
+              />
+              <source
+                srcset="./images/wig_banner/bottom_banner01.png"
+                media="(min-width: 601px)"
+              />
+              <img
+                src="./images/wig_banner/bottom_banner01.png"
+                alt="배너 이미지"
+              />
+            </picture>
+          </div>
+        </div>
+
+        <div class="service_box">
+          <div class="service">
+            <p class="service_title footer_title">
+              <span>고객센터</span> 051-912-1000
+            </p>
+            <p class="service_time">고객센터 운영시간 09:00 ~ 18:00</p>
+            <div class="service_btn_box">
+              <button class="service_btn">1:1 문의하기</button>
+              <button class="service_btn">FQA</button>
+            </div>
+          </div>
+          <div class="pc_footer_logo">
+            <div class="pc_footer_main_logo footer_main_logo">
+              <img src="./images/footer/logo/footer_logo.png" alt="" />
+            </div>
+            <div class="pc_footer_mini_logo footer_mini_logo">
+              <img src="./images/footer/logo/korea_unique.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="mobile_footer_logo">
+          <div class="mobile_footer_main_logo footer_main_logo">
+            <img src="./images/footer/logo/footer_logo.png" alt="" />
+          </div>
+          <ul class="mobile_footer_mini_logo footer_mini_logo">
+            <li>
+              <img src="./images/footer/logo/footer_mini_logo01.png" alt="" />
+            </li>
+            <li>
+              <img src="./images/footer/logo/footer_mini_logo02.png" alt="" />
+            </li>
+            <li>
+              <img src="./images/footer/logo/footer_mini_logo03.png" alt="" />
+            </li>
+            <li>
+              <img src="./images/footer/logo/footer_mini_logo04.png" alt="" />
+            </li>
+          </ul>
+        </div>
+        <div class="notice_box">
+          <div class="notice">
+            <p class="service_title footer_title"><span>공지사항</span></p>
+            <ul class="notice_text">
+              <li>
+                <a href="#!"
+                  >[공지] 영화의전당 '야외광장', '야외극장' 명칭 공모</a
+                >
+              </li>
+              <li>
+                <a href="#!">[공지] 영화의전당 나이트투어 여름 밤마실 안내</a>
+              </li>
+              <li>
+                <a href="#!"
+                  >[공지] (재)영화의전당 임직원 사칭 전화 주의하세요!</a
+                >
+              </li>
+              <li>
+                <a href="#!"
+                  >[공지] 2025 한국문화예술위원회 지원사업 - (무료) 반작 빤짝
+                  예술씨앗!</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="select_box">
+          <select name="select01" id="select_style">
+            <option>영화의 전당</option>
+            <option>영화의 전당</option>
+            <option>영화의 전당</option>
+            <option>영화의 전당</option>
+          </select>
+        </div>
+        <div>
+          <div class="footer_gnb">
+            <ul>
+              <li><a href="#!">개인정보처리방침</a></li>
+              <li><a href="#!">이용약관</a></li>
+              <li><a href="#!">장애인이용안내</a></li>
+              <li><a href="#!">취소/환불 가이드</a></li>
+              <li><a href="#!">정보공개</a></li>
+            </ul>
+          </div>
+          <div class="footer_text_box">
+            <p class="footer_text footer_text01">
+              (우)48058 부산광역시 해운대구 수영강변대로 120 영화의전당(우동
+              1467번지) TEL. 051-780-6000/6080 Fax. 051-780-6019
+            </p>
+            <p class="footer_text footer_text02">
+              (재)영화의전당 대표자 고인범 사업자번호 :
+              617-82-11427통신판매업신고 : 부산해운 제0510호 사업자정보 확인
+              COPYRIGHT(C) BUSAN CINEMA CENTER. ALL RIGHTSRESERVED
+            </p>
+          </div>
+        </div>
+        <div class="mobile_logo">
+          <img src="./images/footer/logo/footer_logo.png" alt="footer_logo" />
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
