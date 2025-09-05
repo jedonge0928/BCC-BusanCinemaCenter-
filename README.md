@@ -48,32 +48,39 @@ JavaScript (Vanilla JS)
 비평가 데이터 : const critic = critics[index];
 
 2)비평가 항목 클릭 시, fullIntroduction 함수가 호출되어 해당 비평가 정보를 화면에 렌더링합니다.
+
 introductionList.forEach((el, i) => {el.classList.toggle("active", i === index);});
 
 3)PC/모바일 뷰에 맞게 비평 작품을 각각 동적으로 삽입하며, 작품이 없으면 안내 문구를 표시합니다.
+
 <img width="585" height="399" alt="image" src="https://github.com/user-attachments/assets/d1de3dbf-f46a-469f-a12a-545e879018a3" />
 
 -비평작 리스트는 마우스 드래그로 좌우 스크롤 가능
 <img width="400" height="100" alt="image" src="https://github.com/user-attachments/assets/6728420d-ce6e-48a4-9aa4-25bb0b2a69bf" />
+
 isDown: 마우스 눌림 상태 (true=드래그 중)
 startX: 드래그 시작 시 마우스 x 위치
 scrollLeft: 드래그 시작 시 스크롤 위치
 : 드래그 움직임을 계산하기 위한 기본 값
 
 <img width="459" height="475" alt="image" src="https://github.com/user-attachments/assets/6c76da87-10c1-4289-a09b-ca304488ecd2" />
+
 mousedown: 마우스 눌리면 드래그 시작(isDown=true), 클래스 추가, 시작 위치(startX)와 현재 스크롤 위치(scrollLeft) 저장
 mouseleave, mouseup: 마우스 떼거나 영역 벗어나면 드래그 끝(isDown=false), 클래스 제거
 mousemove: 드래그 중이면 이동 거리 계산(walk), 스크롤 위치를 시작 위치에서 이동 거리만큼 조정
 : 마우스 드래그로 컨테이너 안 내용을 좌우로 부드럽게 스크롤하는 기능
 
 <img width="529" height="466" alt="image" src="https://github.com/user-attachments/assets/c95c8f57-9f2f-4c16-827c-b1f1edf4047c" />
+
 alwaysDraggableContainers: PC와 모바일 비평 작품 리스트 컨테이너를 선택해 배열에 저장
 forEach로 존재하는 각 컨테이너에 드래그 스크롤 기능(enableDragScroll) 적용
 criticsContainer: 비평가 목록 컨테이너들을 선택
 criticDragApplied: 태블릿용 드래그 기능 적용 여부를 체크하는 플래그
 applyCriticDragIfTablet 함수: 화면 너비가 1024px 이하일 때만(태블릿 이하) 비평가 목록에 드래그 스크롤 기능을 적용하고, 한 번만 실행되도록 플래그 설정
 페이지 로드 시와 화면 크기 변경 시(리사이즈) 이 함수를 호출해 조건에 맞게 드래그 기능 활성화
+
 : PC/모바일 리스트는 항상 드래그 가능하고, 비평가 목록은 태블릿 이하에서만 드래그 가능하게 제어
+
 회고
 
 이 프로젝트로 순수 JavaScript를 활용해 다양한 UI 기능과 인터랙션을 직접 구현하며 프론트엔드 실력을 크게 향상시켰습니다. 스크롤에 따른 메뉴 고정, 슬라이드, 무한 롤링 애니메이션, 그리고 동적 캘린더와 데이터 기반 콘텐츠 렌더링까지 경험하며 실무 감각을 익혔습니다. 특히 Intersection Observer와 마우스 드래그 기능으로 사용자 경험을 높이는 방법을 배웠습니다. 실제 웹사이트에 필요한 기능들을 한 프로젝트에서 체계적으로 다룰 수 있었던 뜻깊은 시간이었습니다.
