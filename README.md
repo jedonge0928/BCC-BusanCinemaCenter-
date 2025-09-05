@@ -83,9 +83,13 @@ JavaScript (Vanilla JS)
 <img width="529" height="466" alt="image" src="https://github.com/user-attachments/assets/c95c8f57-9f2f-4c16-827c-b1f1edf4047c" />
 
 -alwaysDraggableContainers: PC와 모바일 비평 작품 리스트 컨테이너를 선택해 배열에 저장
+
 -forEach로 존재하는 각 컨테이너에 드래그 스크롤 기능(enableDragScroll) 적용
+
 -criticsContainer: 비평가 목록 컨테이너들을 선택
+
 -criticDragApplied: 태블릿용 드래그 기능 적용 여부를 체크하는 플래그
+
 -applyCriticDragIfTablet 함수: 화면 너비가 1024px 이하일 때 비평가 목록에 드래그 스크롤 기능을 적용
 
 
