@@ -26,8 +26,12 @@ JavaScript (Vanilla JS)
 ## 주요 기능
 
 ### 캐러셀 아이템 화면 진입 시 활성화 클래스 적용
+
 <img width="606" height="609" alt="image" src="https://github.com/user-attachments/assets/d2aaf561-c558-4cc2-9685-7869d9969ecb" />
-<img width="602" height="722" alt="image" src="https://github.com/user-attachments/assets/a238347d-6aaf-4200-86fa-566a9a5e1aca" />
+
+
+https://github.com/user-attachments/assets/f701edf1-90f4-4c45-bb2a-85b369c04f83
+
 
 - **`IntersectionObserver`**로 카드가 60% 이상 보이면 `active` 클래스 추가
 - 카드 클릭 시 부드럽게 해당 카드로 스크롤 이동
