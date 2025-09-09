@@ -27,10 +27,7 @@ JavaScript (Vanilla JS)
 
 ### 캐러셀 아이템 화면 진입 시 활성화 클래스 적용
 
-<img width="606" height="609" alt="image" src="https://github.com/user-attachments/assets/d2aaf561-c558-4cc2-9685-7869d9969ecb" />
-
-
-https://github.com/user-attachments/assets/f701edf1-90f4-4c45-bb2a-85b369c04f83
+<img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/d2aaf561-c558-4cc2-9685-7869d9969ecb" />
 
 
 - **`IntersectionObserver`**로 카드가 60% 이상 보이면 `active` 클래스 추가
@@ -38,26 +35,23 @@ https://github.com/user-attachments/assets/f701edf1-90f4-4c45-bb2a-85b369c04f83
 - 활성 카드 강조 및 클릭 이동으로 사용자 경험 개선
 
 ### 캘린더 기능
-<img width="626" height="624" alt="image" src="https://github.com/user-attachments/assets/86728097-b624-45b5-8875-74d5cb13a06f" />
-<img width="490" height="432" alt="image" src="https://github.com/user-attachments/assets/491866bf-e940-49b3-ba83-643e3d50c031" />
 
- 
+<img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/86728097-b624-45b5-8875-74d5cb13a06f" />
 
-https://github.com/user-attachments/assets/5b88bc07-34c7-40f9-bbdc-bba820bbbeb6
+<img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/491866bf-e940-49b3-ba83-643e3d50c031" />
 
 
-
-https://github.com/user-attachments/assets/e5bf7c2c-e247-47d9-9573-fc985e5d303e
-
-
-https://github.com/user-attachments/assets/ca00d4be-9154-4890-87ef-96ab24a5f4e3
-
+https://github.com/user-attachments/assets/7798ad55-986a-4ed8-ae4d-13cbcb6e183b
 
 
 - 현재 연도와 월을 기준으로 달력 렌더링
+ 
 - 월 초 시작 요일에 맞춰 빈 칸 생성 후 날짜 출력
+ 
 - 오늘 날짜에 `active` 클래스 적용해 강조 표시
+  
 - 이전/다음 버튼 클릭 시 월 이동 및 달력 자동 갱신
+  
 
 ### 비평가 소개 및 비평작 렌더링
 
@@ -67,7 +61,7 @@ https://github.com/user-attachments/assets/ca00d4be-9154-4890-87ef-96ab24a5f4e3
 -const critic = critics[index];
 
 
-https://github.com/user-attachments/assets/648c8179-0b82-4604-afb1-c72acdfd669f
+
 
 
 -isDown: 마우스 눌림 상태 (true=드래그 중)
@@ -78,7 +72,7 @@ https://github.com/user-attachments/assets/648c8179-0b82-4604-afb1-c72acdfd669f
 
 : 드래그 움직임을 계산하기 위한 기본 값
 
-<img width="459" height="475" alt="image" src="https://github.com/user-attachments/assets/6c76da87-10c1-4289-a09b-ca304488ecd2" />
+<img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/6c76da87-10c1-4289-a09b-ca304488ecd2" />
 
 -mousedown: 마우스 눌리면 드래그 시작(isDown=true), 클래스 추가, 시작 위치(startX)와 현재 스크롤 위치(scrollLeft) 저장
 
@@ -88,7 +82,7 @@ https://github.com/user-attachments/assets/648c8179-0b82-4604-afb1-c72acdfd669f
 
 : 마우스 드래그로 컨테이너 안 내용을 좌우로 부드럽게 스크롤하는 기능
 
-<img width="529" height="466" alt="image" src="https://github.com/user-attachments/assets/c95c8f57-9f2f-4c16-827c-b1f1edf4047c" />
+<img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/c95c8f57-9f2f-4c16-827c-b1f1edf4047c" />
 
 -alwaysDraggableContainers: PC와 모바일 비평 작품 리스트 컨테이너를 선택해 배열에 저장
 
