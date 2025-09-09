@@ -31,17 +31,15 @@ JavaScript (Vanilla JS)
 
 
 - **`IntersectionObserver`**로 카드가 60% 이상 보이면 `active` 클래스 추가
+
 - 카드 클릭 시 부드럽게 해당 카드로 스크롤 이동
+
 - 활성 카드 강조 및 클릭 이동으로 사용자 경험 개선
+
+
 
 ### 캘린더 기능
 
-<img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/86728097-b624-45b5-8875-74d5cb13a06f" />
-
-<img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/491866bf-e940-49b3-ba83-643e3d50c031" />
-
-
-https://github.com/user-attachments/assets/7798ad55-986a-4ed8-ae4d-13cbcb6e183b
 
 
 - 현재 연도와 월을 기준으로 달력 렌더링
@@ -56,11 +54,13 @@ https://github.com/user-attachments/assets/7798ad55-986a-4ed8-ae4d-13cbcb6e183b
 ### 비평가 소개 및 비평작 렌더링
 
 1)criticsData.js에서 비평가 정보 및 비평 작품 데이터를 불러와 사용합니다. 
+
 비평가 데이터 
 
 -const critic = critics[index];
 
 
+https://github.com/user-attachments/assets/b611c6f0-345b-43b3-95e2-c284c13b049a
 
 
 
