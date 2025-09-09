@@ -41,6 +41,18 @@ https://github.com/user-attachments/assets/f701edf1-90f4-4c45-bb2a-85b369c04f83
 <img width="626" height="624" alt="image" src="https://github.com/user-attachments/assets/86728097-b624-45b5-8875-74d5cb13a06f" />
 <img width="490" height="432" alt="image" src="https://github.com/user-attachments/assets/491866bf-e940-49b3-ba83-643e3d50c031" />
 
+ 
+
+https://github.com/user-attachments/assets/5b88bc07-34c7-40f9-bbdc-bba820bbbeb6
+
+
+
+https://github.com/user-attachments/assets/e5bf7c2c-e247-47d9-9573-fc985e5d303e
+
+
+https://github.com/user-attachments/assets/ca00d4be-9154-4890-87ef-96ab24a5f4e3
+
+
 
 - 현재 연도와 월을 기준으로 달력 렌더링
 - 월 초 시작 요일에 맞춰 빈 칸 생성 후 날짜 출력
@@ -54,17 +66,9 @@ https://github.com/user-attachments/assets/f701edf1-90f4-4c45-bb2a-85b369c04f83
 
 -const critic = critics[index];
 
-2)비평가 항목 클릭 시, fullIntroduction 함수가 호출되어 해당 비평가 정보를 화면에 렌더링합니다.
 
--introductionList.forEach((el, i) => {el.classList.toggle("active", i === index);});
+https://github.com/user-attachments/assets/648c8179-0b82-4604-afb1-c72acdfd669f
 
-3)PC/모바일 뷰에 맞게 비평 작품을 각각 동적으로 삽입하며, 작품이 없으면 안내 문구를 표시합니다.
-
-<img width="585" height="399" alt="image" src="https://github.com/user-attachments/assets/d1de3dbf-f46a-469f-a12a-545e879018a3" />
-
--비평작 리스트는 마우스 드래그로 좌우 스크롤 가능
-
-<img width="400" height="100" alt="image" src="https://github.com/user-attachments/assets/6728420d-ce6e-48a4-9aa4-25bb0b2a69bf" />
 
 -isDown: 마우스 눌림 상태 (true=드래그 중)
 
