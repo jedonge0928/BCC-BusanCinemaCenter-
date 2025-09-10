@@ -6,7 +6,7 @@
 
 HTML
 
-CSS (Flexbox, Media Query 등)
+CSS
 
 JavaScript (Vanilla JS)
 
@@ -14,14 +14,45 @@ JavaScript (Vanilla JS)
 
 ## 캐러셀 애니메이션 (IntersectionObserver 활용)
 
-카드가 화면에 60% 이상 진입 시 active 클래스 적용
+* 카드가 화면에 60% 이상 진입 시 active 클래스 적용
 
-클릭 시 해당 카드로 부드럽게 스크롤 이동
+* 클릭 시 해당 카드로 부드럽게 스크롤 이동
 
-사용자 시각 흐름에 맞춰 강조 효과 및 이동 기능 개선
+* 사용자 시각 흐름에 맞춰 강조 효과 및 이동 기능 개선
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/d2aaf561-c558-4cc2-9685-7869d9969ecb" width="450" /></p>
+```
+ const items = document.querySelectorAll(".carousel_item");
+  const container = document.querySelector(".carousel_container");
 
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        } else {
+          entry.target.classList.remove("active");
+        }
+      });
+    },
+    {
+      root: container,
+      threshold: 0.6,
+    }
+  );
+
+  items.forEach((item) => {
+    observer.observe(item);
+
+    item.addEventListener("click", () => {
+      item.scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+
+```
+
+<img width="403" height="561" alt="image" src="https://github.com/user-attachments/assets/95bbd316-f9ef-4a4c-8efa-15f35c7dcdd9" />
 
 ## 캘린더 기능
 
@@ -31,20 +62,72 @@ JavaScript (Vanilla JS)
 
 오늘 날짜 강조, 이전/다음 월로 이동 기능 포함
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/c3f36a49-eaa3-4e64-b2bf-93f72b765e8f" width="800" /> </p>
+```
+  const monthText = document.querySelector(".month_text");
+  const datesEl = document.querySelector(".dates");
+  const prevBtn = document.querySelector(".calendar_prev");
+  const nextBtn = document.querySelector(".calendar_next");
+
+  let today = new Date();
+  let currentYear = today.getFullYear();
+  let currentMonth = today.getMonth();
+
+  function renderCalendar(year, month) {
+    const firstDay = new Date(year, month, 1).getDay();
+    const lastDate = new Date(year, month + 1, 0).getDate();
+
+    monthText.textContent = `${month + 1}월`;
+    datesEl.innerHTML = "";
+
+    for (let i = 0; i < firstDay; i++) {
+      datesEl.innerHTML += `<div></div>`;
+    }
+
+    for (let d = 1; d <= lastDate; d++) {
+      const date = new Date(year, month, d);
+      const isToday =
+        date.getDate() === today.getDate() &&
+        date.getMonth() === today.getMonth() &&
+        date.getFullYear() === today.getFullYear();
+
+      datesEl.innerHTML += `<div class="${isToday ? "active" : ""}">${d}</div>`;
+    }
+  }
+
+  renderCalendar(currentYear, currentMonth);
+
+  prevBtn.addEventListener("click", () => {
+    currentMonth--;
+    if (currentMonth < 0) {
+      currentMonth = 11;
+      currentYear--;
+    }
+    renderCalendar(currentYear, currentMonth);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentMonth++;
+    if (currentMonth > 11) {
+      currentMonth = 0;
+      currentYear++;
+    }
+    renderCalendar(currentYear, currentMonth);
+  });
+});
+
+```
+<img width="1552" height="425" alt="image" src="https://github.com/user-attachments/assets/6e32ab2b-703c-47ee-b4dd-65644da646a9" />
+
 
 ## 비평가 소개 및 비평 작품 렌더링
 
 criticsData.js에서 데이터 불러와 비평가 정보와 작품 리스트 출력
 
-<p><img src="https://github.com/user-attachments/assets/01c3d23c-8be3-4e36-8cc0-5b9d99f44f38" width="450" /> </p>
 
 클릭 시 해당 비평가 정보와 작품을 PC/모바일에 맞게 자동 렌더링
 
 비평 작품 없을 경우 예외 처리 메시지 출력
 
-
-<img width="450" height="400" alt="image" src="https://github.com/user-attachments/assets/1af74c20-6f2c-4700-a8f1-7245dc84472d" />
 
 
 드래그 스크롤 기능 (가로 스크롤)
@@ -53,16 +136,55 @@ criticsData.js에서 데이터 불러와 비평가 정보와 작품 리스트 �
 
 PC/모바일: 항상 드래그 가능, 비평가 목록: 태블릿 이하 해상도만 적용
 
-<p><img src="https://github.com/user-attachments/assets/6c76da87-10c1-4289-a09b-ca304488ecd2" width="450" height="400" /> <img src="https://github.com/user-attachments/assets/c95c8f57-9f2f-4c16-827c-b1f1edf4047c" width="450" height="400" /> </p>
+```
+const fullIntroduction = (index) => {
+  const critic = critics[index];
+  fullName.textContent = critic.name;
+  fullText.textContent = critic.text;
 
- https://github.com/user-attachments/assets/b611c6f0-345b-43b3-95e2-c284c13b049a
+  introductionList.forEach((el, i) => {
+    el.classList.toggle("active", i === index);
+  });
+
+  reviewContainerPC.innerHTML = "";
+  reviewContainerMobile.innerHTML = "";
+
+  if (critic.product && critic.product.length > 0) {
+    critic.product.forEach((item) => {
+      const html = `
+        <div class="criticism">
+          <div class="criticism_img">
+            <img src="${item.img}" alt="${item.title}" />
+          </div>
+          <p class="criticism_title">${item.title}</p>
+          <p class="criticism_name">${item.critic_name}</p>
+        </div>
+      `;
+      reviewContainerPC.insertAdjacentHTML("beforeend", html);
+      reviewContainerMobile.insertAdjacentHTML("beforeend", html);
+    });
+  } else {
+    reviewContainerPC.innerHTML = `<p>등록된 비평 작품이 없습니다.</p>`;
+    reviewContainerMobile.innerHTML = `<p>등록된 비평 작품이 없습니다.</p>`;
+  }
+};
+
+criticsElems.forEach((elem, index) => {
+  elem.addEventListener("click", () => fullIntroduction(index));
+});
+
+mobileCriticsElems.forEach((elem, index) => {
+  elem.addEventListener("click", () => fullIntroduction(index));
+});
+window.addEventListener("DOMContentLoaded", () => {
+  fullIntroduction(0);
+});
+
+```
+
+<img width="814" height="697" alt="image" src="https://github.com/user-attachments/assets/320c6242-745b-43da-82b8-de5f0095338e" />
 
 
-반응형 및 UX 고려 사항
-
-GNB 메뉴 토글, 스크롤 시 상단 메뉴 고정
-
-성능을 고려한 Intersection Observer 최적화 처리
 
 
 
@@ -81,4 +203,33 @@ GNB 메뉴 토글, 스크롤 시 상단 메뉴 고정
 
  배포된 사이트 바로가기(http://jedongkim.dothome.co.kr/)
 
-![영화의전당 - Chrome 2025-09-09 12-08-56](https://github.com/user-attachments/assets/31ec3704-67b0-4af9-a167-f7a3ed1db094)
+
+
+# 모아보기
+
+
+
+
+
+
+https://github.com/user-attachments/assets/dad538f5-26f0-4b0f-9286-300686daff34
+
+
+
+
+https://github.com/user-attachments/assets/6e669438-e998-4685-81c8-bdfdb38c4d43
+
+
+
+
+https://github.com/user-attachments/assets/3de94a5b-65e2-42b9-ba44-7e41778ddb39
+
+
+
+
+
+
+https://github.com/user-attachments/assets/85eb4b4c-8e69-417b-a548-6815d12f1bc1
+
+
+
